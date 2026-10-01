@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor & Brasa - Hamburgueria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABAÇALHO E MENU -->
+    <header class="cabecalho">
+        <div class="logo">
+            <h1>Sabor & Brasa</h1>
+        </div>
+        <nav class="navegacao">
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#modalLogin" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEÇÃO: HOME -->
+        <section id="home" class="secao-home">
+            <div class="home-overlay">
+                <div class="home-conteudo">
+                    <h1>Sabor & Brasa</h1>
+                    <p>O autêntico hambúrguer artesanal grelhado na brasa</p>
+                    <a href="#cardapio" class="btn-principal">Confira nosso cardápio 👇</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: SOBRE -->
+        <section id="sobre" class="secao-sobre">
+            <div class="sobre-bloco">
+                <div class="sobre-texto">
+                    <h2>Sabor de verdade em cada mordida.</h2>
+                    <p>
+                        Na nossa hamburgueria, hambúrguer é assunto sério. Não usamos atalhos:<br>
+                         trabalhamos exclusivamente com blends de carnes nobres e selecionadas,<br>
+                          moídas e moldadas diariamente. Cada disco vai direto para a grelha no<br> fogo forte,
+                           garantindo aquela crosta perfeita por fora e um interior<br> extremamente suculento e cheio de sabor.<br>
+                            <br>
+                        Para acompanhar, selecionamos pães artesanais selados na manteiga,<br>
+                         queijos de verdade derretidos no ponto ideal e molhos autorais preparados do zero na nossa cozinha.<br>
+                          Do clássico pão, carne e queijo às combinações mais ousadas com bacon crocante e acompanhamentos crocantes,<br>
+                           entregamos uma verdadeira experiência gastronômica.<br>
+                    </p>
+                </div>
+                <img src="1 sobre.avif"alt=Hamburgueria Sabor & Brasa class="sobre-imagem">
+            </div>
+
+            <div class="sobre-bloco">
+                <div class="sobre-texto">
+                    <h2>Nossa Experiência Gastronômica</h2>
+                    <p>
+                        <strong>O Segredo da Nossa Brasa</strong><br>
+                        A história da nossa hamburgueria começou com um desejo simples:<br>
+                         resgatar a essência do hambúrguer artesanal clássico,<br>
+                        A história da nossa hamburgueria nasceu de um desejo claro:<br>
+                         resgatar a verdadeira essência do hambúrguer artesanal clássico<br>
+                          e elevar cada ingrediente ao seu nível máximo.<br>
+                          Cansados dos processos ultraprocessados e do modelo industrializado,<br>
+                           decidimos voltar ao básico,mas de uma forma extraordinária.<br>
+                           <br>
+                        Para nós, o fogo não é apenas um método de preparo, é o nosso<br>
+                         ingrediente principal. É no calor da brasa viva que o sabor<br>
+                          defumado único desperta, selando carnes selecionadas e garantindo<br>
+                        uma suculência incomparável. Unimos a simplicidade da tradição à paixão<br>
+                         pela gastronomia artesanal, onde nada é congelado e tudo é feito do zero,<br>
+                          com respeito ao tempo e ao sabor de verdade.
+                    </p>
+                </div>
+                <img src="2 sobre.avif" alt="Churrasco na brasa" class="sobre-imagem">
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CONTATO -->
+        <section id="contato" class="secao-contato">
+            <h2>Contato & Localização</h2>
+            <p>Faça seu pedido ou venha nos visitar!</p>
+            
+            <div class="contato-info">
+                <p>📍 Endereço: Rua da Brasa, 123 - Centro</p>
+                <p>📞 Telefone / WhatsApp: (31) 99999-9999</p>
+                <p>⏰ Funcionamento: Terça a Domingo, das 18h às 23h30</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE LOGIN SIMPLIFICADO -->
+    <div id="modalLogin" class="modal">
+        <div class="conteudo-modal">
+            <a href="#" class="fechar">&times;</a>
+            <h2>Login</h2>
+            <form action="#">
+                <input type="email" placeholder="Seu e-mail" required>
+                <input type="password" placeholder="Sua senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!--PAGAMENTO -->
+    <div id="modalPagamento" class="modal">
+        <div class="conteudo-modal">
+            <a href="#" class="fechar">&times;</a>
+            <h2>Finalizar Pedido</h2>
+            <form action="#">
+                <input type="text" placeholder="Seu Nome completo" required>
+                <input type="text" placeholder="Endereço de Entrega" required>
+                
+                <label class="label-pagamento">Forma de Pagamento:</label>
+                <select required>
+                    <option value="">Selecione...</option>
+                    <option value="pix">PIX</option>
+                    <option value="cartao">Cartão de Crédito / Débito</option>
+                    <option value="dinheiro">Dinheiro</option>
+                </select>
+
+                <button type="submit" class="btn-pagar">Confirmar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <p>Sabor & Brasa &copy; Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* ==================== ESTILOS GERAIS ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* ==================== CABAÇALHO / MENU ==================== */
+.cabecalho {
+    width: 100%;
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo h1 {
+    color: #ffc107;
+    font-size: 22px;
+}
+
+.navegacao {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px 15px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ffc107;
+}
+
+.btn-login {
+    background-color: #ec931f;
+    border-radius: 4px;
+    padding: 8px 15px !important;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background-color: #C0392B !important;
+    color: #ffffff !important;
+}
+/* ==================== SEÇÃO: CARDÁPIO ==================== */
+.secao-cardapio {
+    width: 100%;
+    background-color: #e4e1db;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cardapio-header h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.cardapio-header p {
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.cardapio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+.cartao-produto {
+    background-color: 
+    #000000;
+    border: 2px solid #F39C12;
+    border-radius: 8px;
+    width: 260px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.cartao-produto:hover {
+    transform: translateY(-5px);
+}
+
+.cartao-produto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cartao-produto h3 {
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+    background-color: #d8d8d8;
+}
+
+.sku {
+    color: #7F8C8D;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    font-size: 14px;
+    color: #fff8f8;
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+
+.preco {
+    color: #ffc107;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-pedido {
+    background-color: #C0392B;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.btn-pedido:hover {
+    background-color: #a93223;
+}
+
+/* ==================== RODAPÉ ==================== */
+.rodape {
+    background-color: #111111;
+    color: #888888;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
