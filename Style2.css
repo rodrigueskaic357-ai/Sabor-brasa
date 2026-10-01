@@ -12,7 +12,7 @@ html {
 /* ==================== CABAÇALHO / MENU ==================== */
 .cabecalho {
     width: 100%;
-    background-color: #333333;
+    background-color: #333;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -64,7 +64,7 @@ html {
 /* ==================== SEÇÃO: CARDÁPIO ==================== */
 .secao-cardapio {
     width: 100%;
-    background-color: #e4e1db;
+    background-color: #474645;
     padding: 80px 20px;
     text-align: center;
 }
