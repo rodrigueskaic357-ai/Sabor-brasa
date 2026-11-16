@@ -1,193 +1,508 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cardápio - Sabor & Brasa</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
- <!-- CABAÇALHO E MENU -->
- <header class="cabecalho">
+
+<header class="cabecalho">
     <div class="logo">
         <h1>Sabor & Brasa</h1>
     </div>
+
     <nav class="navegacao">
         <ul class="menu">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#sobre">Sobre</a></li>
             <li><a href="cardapio.html">Cardápio</a></li>
             <li><a href="index.html#contato">Contato</a></li>
+            <li>
+                <a href="carrinho.html">
+                    Carrinho (<span id="contadorCarrinho">0</span>)
+                </a>
+            </li>
             <li><a href="index.html#modalLogin" class="btn-login">Login</a></li>
         </ul>
     </nav>
 </header>
 
+<main>
 
-   <!-- SEÇÃO: CARDÁPIO -->
-   <section id="cardapio" class="secao-cardapio">
+<section class="secao-cardapio">
+
     <header class="cardapio-header">
         <h2>Nosso Cardápio</h2>
-        <p>Escolha o seu lanche preferido</p>
+        <p>Escolha sua categoria e encontre seu favorito!</p>
     </header>
 
-    <!-- Primeira grade -->
-    <div class="cardapio-grid">
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="X-Fumaça">
-            <h3>X-Fumaça</h3>
-            <span class="sku">Código: HAMB-01</span>
-            <p class="descricao">Pão brioche, hambúrguer artesanal 150g e queijo prato derretido.</p>
-            <span class="preco">R$ 22,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+    <!-- CATEGORIAS -->
+    <nav class="categorias">
+        <a href="#hamburgueres">Hambúrgueres</a>
+        <a href="#acompanhamentos">Acompanhamentos</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#sobremesas">Sobremesas</a>
+    </nav>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400" alt="Monstro de Minas">
-            <h3>Monstro de Minas</h3>
-            <span class="sku">Código: HAMB-02</span>
-            <p class="descricao">Pão, hambúrguer 150g, queijo, alface fresca e tomate.</p>
-            <span class="preco">R$ 24,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+    <!-- HAMBÚRGUERES -->
+    <section class="categoria-produtos" id="hamburgueres">
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400" alt="O Alquimista">
-            <h3>O Alquimista</h3>
-            <span class="sku">Código: HAMB-03</span>
-            <p class="descricao">Pão, hambúrguer 150g, queijo e tiras de bacon bem crocante.</p>
-            <span class="preco">R$ 29,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+        <header class="titulo-categoria">
+            <h2>Hambúrgueres</h2>
+            <p>Nossos lanches artesanais preparados especialmente para você.</p>
+        </header>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400" alt="Refrigerante Lata">
-            <h3>Refrigerante Lata</h3>
-            <span class="sku">Código: BEB-01</span>
-            <p class="descricao">Lata de 350ml bem gelada (Coca-Cola, Guaraná ou Fanta).</p>
-            <span class="preco">R$ 6,00</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
-    </div>
+        <div class="cardapio-grid">
 
-    <div class="cardapio-grid">
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400" alt="Duplo Cheddar Melt">
-            <h3>Duplo Cheddar Melt</h3>
-            <span class="sku">Código: HAMB-04</span>
-            <p class="descricao">Dois hambúrgueres 120g, cheddar cremoso e cebola caramelizada.</p>
-            <span class="preco">R$ 32,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="X-Fumaça">
+                <h3>X-Fumaça</h3>
+                <span class="sku">Código: HAMB-01</span>
+                <p class="descricao">Pão brioche, hambúrguer artesanal 150g e queijo prato derretido.</p>
+                <span class="preco">R$ 22,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=400" alt="Chicken Supreme">
-            <h3>Chicken Supreme</h3>
-            <span class="sku">Código: HAMB-05</span>
-            <p class="descricao">Frango empanado crocante, maionese temperada, alface e queijo.</p>
-            <span class="preco">R$ 23,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400" alt="Monstro de Minas">
+                <h3>Monstro de Minas</h3>
+                <span class="sku">Código: HAMB-02</span>
+                <p class="descricao">Pão, hambúrguer 150g, queijo, alface fresca e tomate.</p>
+                <span class="preco">R$ 24,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?w=400" alt="Smash Gorgonzola">
-            <h3>Smash Gorgonzola</h3>
-            <span class="sku">Código: HAMB-06</span>
-            <p class="descricao">Hambúrguer smash 100g, creme de gorgonzola e mel de engenho.</p>
-            <span class="preco">R$ 27,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400" alt="O Alquimista">
+                <h3>O Alquimista</h3>
+                <span class="sku">Código: HAMB-03</span>
+                <p class="descricao">Pão, hambúrguer 150g, queijo e tiras de bacon bem crocante.</p>
+                <span class="preco">R$ 29,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" alt="Suco Natural">
-            <h3>Suco Natural 500ml</h3>
-            <span class="sku">Código: BEB-02</span>
-            <p class="descricao">Suco feito na hora (Laranja, Maracujá ou Limão com Hortelã).</p>
-            <span class="preco">R$ 9,00</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
-    </div>
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400" alt="Duplo Cheddar Melt">
+                <h3>Duplo Cheddar Melt</h3>
+                <span class="sku">Código: HAMB-04</span>
+                <p class="descricao">Dois hambúrgueres 120g, cheddar cremoso e cebola caramelizada.</p>
+                <span class="preco">R$ 32,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
 
-    <div class="cardapio-grid">
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400" alt="Veggie Garden">
-            <h3>Veggie Garden</h3>
-            <span class="sku">Código: HAMB-07</span>
-            <p class="descricao">Hambúrguer de grão-de-bico, queijo vegano, rúcula e tomate seco.</p>
-            <span class="preco">R$ 26,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=400" alt="Chicken Supreme">
+                <h3>Chicken Supreme</h3>
+                <span class="sku">Código: HAMB-05</span>
+                <p class="descricao">Frango empanado crocante, maionese temperada, alface e queijo.</p>
+                <span class="preco">R$ 23,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400" alt="Costela BBQ">
-            <h3>Costela BBQ</h3>
-            <span class="sku">Código: HAMB-08</span>
-            <p class="descricao">Hambúrguer de costela 180g, queijo provolone e molho barbecue artesanal.</p>
-            <span class="preco">R$ 34,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400" alt="Veggie Garden">
+                <h3>Veggie Garden</h3>
+                <span class="sku">Código: HAMB-07</span>
+                <p class="descricao">Hambúrguer de grão-de-bico, queijo vegano, rúcula e tomate seco.</p>
+                <span class="preco">R$ 26,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=400" alt="Batata Rústica">
-            <h3>Batata Rústica</h3>
-            <span class="sku">Código: ACOMP-01</span>
-            <p class="descricao">Porção individual de batatas temperadas com alecrim e alho.</p>
-            <span class="preco">R$ 14,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400" alt="Costela BBQ">
+                <h3>Costela BBQ</h3>
+                <span class="sku">Código: HAMB-08</span>
+                <p class="descricao">Hambúrguer de costela 180g, queijo provolone e molho barbecue artesanal.</p>
+                <span class="preco">R$ 34,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400" alt="Milkshake de Nutella">
-            <h3>Milkshake de Nutella</h3>
-            <span class="sku">Código: SOBRE-01</span>
-            <p class="descricao">Milkshake cremoso de 400ml com calda de Nutella e chantilly.</p>
-            <span class="preco">R$ 18,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
-    </div>
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Texano Ranch">
+                <h3>Texano Ranch</h3>
+                <span class="sku">Código: HAMB-09</span>
+                <p class="descricao">Hambúrguer 150g, onion rings crocantes, queijo gouda e molho ranch.</p>
+                <span class="preco">R$ 31,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
 
-    <div class="cardapio-grid">
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f6?w=400" alt="Texano Ranch">
-            <h3>Texano Ranch</h3>
-            <span class="sku">Código: HAMB-09</span>
-            <p class="descricao">Hambúrguer 150g, onion rings crocantes, queijo gouda e molho ranch.</p>
-            <span class="preco">R$ 31,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
         </div>
+    </section>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1549611016-3a70d82b5040?w=400" alt="Onion Rings">
-            <h3>Onion Rings</h3>
-            <span class="sku">Código: ACOMP-02</span>
-            <p class="descricao">Porção de anéis de cebola empanados e super crocantes com molho especial.</p>
-            <span class="preco">R$ 16,90</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+    <!-- ACOMPANHAMENTOS -->
+    <section class="categoria-produtos" id="acompanhamentos">
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400" alt="Chá Gelado da Casa">
-            <h3>Chá Gelado da Casa</h3>
-            <span class="sku">Código: BEB-03</span>
-            <p class="descricao">Chá de pêssego artesanal gelado de 500ml com rodelas de limão.</p>
-            <span class="preco">R$ 8,00</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
-        </div>
+        <header class="titulo-categoria">
+            <h2>Acompanhamentos</h2>
+            <p>Para deixar seu lanche ainda mais completo.</p>
+        </header>
 
-        <div class="cartao-produto">
-            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400" alt="Brownie com Sorvete">
-            <h3>Brownie com Sorvete</h3>
-            <span class="sku">Código: SOBRE-02</span>
-            <p class="descricao">Brownie quente de chocolate acompanhado de bola de sorvete de baunilha.</p>
-            <span class="preco">R$ 16,00</span>
-            <a href="#modalPagamento" class="btn-pedido">Pedir Lanche</a>
+        <div class="cardapio-grid">
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=400" alt="Batata Rústica">
+                <h3>Batata Rústica</h3>
+                <span class="sku">Código: ACOMP-01</span>
+                <p class="descricao">Porção individual de batatas temperadas com alecrim e alho.</p>
+                <span class="preco">R$ 14,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1549611016-3a70d82b5040?w=400" alt="Onion Rings">
+                <h3>Onion Rings</h3>
+                <span class="sku">Código: ACOMP-02</span>
+                <p class="descricao">Porção de anéis de cebola empanados e super crocantes com molho especial.</p>
+                <span class="preco">R$ 16,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400" alt="Batata Frita">
+                <h3>Batata Frita Tradicional</h3>
+                <span class="sku">Código: ACOMP-03</span>
+                <p class="descricao">Porção de batatas fritas crocantes e douradas.</p>
+                <span class="preco">R$ 12,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400" alt="Batata com Cheddar">
+                <h3>Batata com Cheddar</h3>
+                <span class="sku">Código: ACOMP-04</span>
+                <p class="descricao">Batatas fritas cobertas com cheddar cremoso.</p>
+                <span class="preco">R$ 19,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1518013431117-eb1465fa5752?w=400" alt="Batata com Bacon">
+                <h3>Batata com Bacon</h3>
+                <span class="sku">Código: ACOMP-05</span>
+                <p class="descricao">Porção de batatas fritas com pedaços de bacon crocante.</p>
+                <span class="preco">R$ 21,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?w=400" alt="Nuggets">
+                <h3>Nuggets de Frango</h3>
+                <span class="sku">Código: ACOMP-06</span>
+                <p class="descricao">Porção de nuggets de frango empanados e crocantes.</p>
+                <span class="preco">R$ 17,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400" alt="Asinhas de Frango">
+                <h3>Asinhas de Frango</h3>
+                <span class="sku">Código: ACOMP-07</span>
+                <p class="descricao">Asinhas de frango assadas com tempero especial da casa.</p>
+                <span class="preco">R$ 24,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=400" alt="Iscas de Frango">
+                <h3>Iscas de Frango</h3>
+                <span class="sku">Código: ACOMP-08</span>
+                <p class="descricao">Tiras de frango empanadas acompanhadas de molho especial.</p>
+                <span class="preco">R$ 22,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400" alt="Batata com Cheddar e Bacon">
+                <h3>Batata Especial</h3>
+                <span class="sku">Código: ACOMP-09</span>
+                <p class="descricao">Batatas fritas com cheddar cremoso e bacon crocante.</p>
+                <span class="preco">R$ 24,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Mini Pizza">
+                <h3>Mini Pizza</h3>
+                <span class="sku">Código: ACOMP-10</span>
+                <p class="descricao">Mini pizza individual com molho de tomate e queijo.</p>
+                <span class="preco">R$ 15,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=400" alt="Anéis de Cebola com Cheddar">
+                <h3>Onion Rings Especial</h3>
+                <span class="sku">Código: ACOMP-11</span>
+                <p class="descricao">Anéis de cebola empanados acompanhados de cheddar.</p>
+                <span class="preco">R$ 19,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pão de Alho">
+                <h3>Pão de Alho</h3>
+                <span class="sku">Código: ACOMP-12</span>
+                <p class="descricao">Pães recheados com creme de alho e queijo gratinado.</p>
+                <span class="preco">R$ 13,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
         </div>
-    </div>
+    </section>
+
+    <!-- BEBIDAS -->
+    <section class="categoria-produtos" id="bebidas">
+
+        <header class="titulo-categoria">
+            <h2>Bebidas</h2>
+            <p>Opções geladas para acompanhar seu pedido.</p>
+        </header>
+
+        <div class="cardapio-grid">
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400" alt="Refrigerante">
+                <h3>Refrigerante Lata</h3>
+                <span class="sku">Código: BEB-01</span>
+                <p class="descricao">Lata de 350ml bem gelada (Coca-Cola, Guaraná ou Fanta).</p>
+                <span class="preco">R$ 6,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" alt="Suco Natural">
+                <h3>Suco Natural 500ml</h3>
+                <span class="sku">Código: BEB-02</span>
+                <p class="descricao">Suco feito na hora (Laranja, Maracujá ou Limão com Hortelã).</p>
+                <span class="preco">R$ 9,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400" alt="Chá Gelado">
+                <h3>Chá Gelado da Casa</h3>
+                <span class="sku">Código: BEB-03</span>
+                <p class="descricao">Chá de pêssego artesanal gelado de 500ml com rodelas de limão.</p>
+                <span class="preco">R$ 8,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=400" alt="Água Mineral">
+                <h3>Água Mineral</h3>
+                <span class="sku">Código: BEB-04</span>
+                <p class="descricao">Água mineral sem gás, garrafa de 500ml.</p>
+                <span class="preco">R$ 4,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="images.jpg" alt="Água com Gás">
+                <h3>Água com Gás</h3>
+                <span class="sku">Código: BEB-05</span>
+                <p class="descricao">Água mineral gaseificada, garrafa de 500ml.</p>
+                <span class="preco">R$ 5,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" alt="Suco de Morango">
+                <h3>Suco de Morango</h3>
+                <span class="sku">Código: BEB-06</span>
+                <p class="descricao">Suco natural de morango preparado na hora, 500ml.</p>
+                <span class="preco">R$ 10,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=400" alt="Limonada">
+                <h3>Limonada Suíça</h3>
+                <span class="sku">Código: BEB-07</span>
+                <p class="descricao">Limonada cremosa preparada com limão e gelo, 500ml.</p>
+                <span class="preco">R$ 9,50</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400" alt="Suco de Laranja">
+                <h3>Suco de Laranja</h3>
+                <span class="sku">Código: BEB-08</span>
+                <p class="descricao">Suco natural de laranja, preparado na hora, 500ml.</p>
+                <span class="preco">R$ 8,50</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" alt="Suco de Abacaxi">
+                <h3>Suco de Abacaxi</h3>
+                <span class="sku">Código: BEB-09</span>
+                <p class="descricao">Suco refrescante de abacaxi natural, 500ml.</p>
+                <span class="preco">R$ 8,50</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400" alt="Chá de Limão">
+                <h3>Chá Gelado de Limão</h3>
+                <span class="sku">Código: BEB-10</span>
+                <p class="descricao">Chá gelado de limão com toque de hortelã, 500ml.</p>
+                <span class="preco">R$ 8,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400" alt="Milkshake de Chocolate">
+                <h3>Milkshake de Chocolate</h3>
+                <span class="sku">Código: BEB-11</span>
+                <p class="descricao">Milkshake cremoso de chocolate, servido bem gelado, 400ml.</p>
+                <span class="preco">R$ 16,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400" alt="Limonada com Morango">
+                <h3>Limonada com Morango</h3>
+                <span class="sku">Código: BEB-13</span>
+                <p class="descricao">Bebida refrescante de limão e morango, 500ml.</p>
+                <span class="preco">R$ 10,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOBREMESAS -->
+    <section class="categoria-produtos" id="sobremesas">
+
+        <header class="titulo-categoria">
+            <h2>Sobremesas</h2>
+            <p>Um toque doce para finalizar sua experiência.</p>
+        </header>
+
+        <div class="cardapio-grid">
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400" alt="Brownie com Sorvete">
+                <h3>Brownie com Sorvete</h3>
+                <span class="sku">Código: SOBRE-02</span>
+                <p class="descricao">Brownie quente de chocolate acompanhado de bola de sorvete de baunilha.</p>
+                <span class="preco">R$ 16,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400" alt="Sorvete">
+                <h3>Sorvete Especial</h3>
+                <span class="sku">Código: SOBRE-03</span>
+                <p class="descricao">Duas bolas de sorvete com cobertura de chocolate.</p>
+                <span class="preco">R$ 12,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400" alt="Bolo de Chocolate">
+                <h3>Bolo de Chocolate</h3>
+                <span class="sku">Código: SOBRE-04</span>
+                <p class="descricao">Fatia de bolo de chocolate com recheio cremoso.</p>
+                <span class="preco">R$ 14,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400" alt="Donuts">
+                <h3>Donuts de Chocolate</h3>
+                <span class="sku">Código: SOBRE-06</span>
+                <p class="descricao">Donut macio com cobertura de chocolate.</p>
+                <span class="preco">R$ 9,00</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400" alt="Cheesecake">
+                <h3>Cheesecake de Morango</h3>
+                <span class="sku">Código: SOBRE-07</span>
+                <p class="descricao">Cheesecake cremoso com cobertura de morango.</p>
+                <span class="preco">R$ 16,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=400" alt="Cupcake">
+                <h3>Cupcake de Baunilha</h3>
+                <span class="sku">Código: SOBRE-08</span>
+                <p class="descricao">Cupcake de baunilha com cobertura cremosa.</p>
+                <span class="preco">R$ 8,50</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1511911063855-2bf39afa5b2e?w=400" alt="Torta de Limão">
+                <h3>chocolacutela torre</h3>
+                <span class="sku">Código: SOBRE-09</span>
+                <p class="descricao">Torta com creme de limão e cobertura de merengue.</p>
+                <span class="preco">R$ 13,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400" alt="Banana Split">
+                <h3>Banana Split</h3>
+                <span class="sku">Código: SOBRE-10</span>
+                <p class="descricao">Banana acompanhada de sorvete, calda e chantilly.</p>
+                <span class="preco">R$ 18,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1557142046-c704a3adf364?w=400" alt="Açaí">
+                <h3>Açaí na Tigela</h3>
+                <span class="sku">Código: SOBRE-11</span>
+                <p class="descricao">Açaí cremoso com granola e leite condensado.</p>
+                <span class="preco">R$ 17,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=400" alt="Mousse de Maracujá">
+                <h3>Mousse de Maracujá</h3>
+                <span class="sku">Código: SOBRE-12</span>
+                <p class="descricao">Mousse leve e cremosa com calda de maracujá.</p>
+                <span class="preco">R$ 11,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400" alt="Brigadeiro">
+                <h3>Brigadeiro Gourmet</h3>
+                <span class="sku">Código: SOBRE-13</span>
+                <p class="descricao">Porção com quatro brigadeiros de chocolate.</p>
+                <span class="preco">R$ 9,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="cartao-produto">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400" alt="Cookie">
+                <h3>Cookie com Chocolate</h3>
+                <span class="sku">Código: SOBRE-14</span>
+                <p class="descricao">Cookie artesanal com gotas de chocolate.</p>
+                <span class="preco">R$ 8,90</span>
+                <a href="#" class="btn-pedido">Adicionar ao Carrinho</a>
+            </div>
+
+        </div>
+    </section>
+
 </section>
+</main>
 
-<!-- RODAPÉ -->
 <footer class="rodape">
     <p>Sabor & Brasa &copy; Todos os direitos reservados.</p>
 </footer>
+
+<script src="carrinho.js"></script>
+
 </body>
 </html>

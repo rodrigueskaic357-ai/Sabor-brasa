@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Sabor & Brasa</title>
+    <link rel="stylesheet" href="carrinho.css">
+     <link rel="stylesheet" href="Style2.css">
+    <script src="carrinho.js" defer></script>
+</head>
+<body>
+
+<header class="cabecalho">
+    <div class="logo">
+        <h1>Sabor & Brasa</h1>
+    </div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+            <li><a href="carrinho.html">Carrinho (<span id="contadorCarrinho">0</span>)</a></li>
+            <li><a href="index.html#modalLogin" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="pagina-carrinho">
+
+    <h2>Meu Carrinho</h2>
+    <p>Confira os produtos que você escolheu.</p>
+
+    <div id="itensCarrinho"></div>
+
+    <div class="resumo-carrinho">
+        <h3>Resumo do Pedido</h3>
+
+        <div class="linha-total">
+            <span>Subtotal:</span>
+            <span id="subtotalCarrinho">R$ 0,00</span>
+        </div>
+
+        <div class="linha-total">
+            <strong>Total:</strong>
+            <strong id="totalCarrinho">R$ 0,00</strong>
+        </div>
+
+        <a href="cardapio.html" class="btn-voltar">
+            Continuar comprando
+        </a>
+    </div>
+
+    <section class="finalizar-compra">
+        <h2>Finalizar Pedido</h2>
+
+        <form id="formFinalizar">
+
+            <label for="nomeCliente">Nome completo:</label>
+            <input
+                type="text"
+                id="nomeCliente"
+                placeholder="Digite seu nome"
+                required
+            >
+
+            <label for="enderecoCliente">Endereço de entrega:</label>
+            <input
+                type="text"
+                id="enderecoCliente"
+                placeholder="Digite seu endereço"
+                required
+            >
+
+            <label for="pagamentoCliente">Forma de pagamento:</label>
+            <select id="pagamentoCliente" required>
+                <option value="">Selecione</option>
+                <option value="PIX">PIX</option>
+                <option value="Cartão">Cartão</option>
+                <option value="Dinheiro">Dinheiro</option>
+            </select>
+
+            <button type="submit" class="btn-finalizar">
+            <li><a href="confirmacao.html"></a>Finalizar Pedido</li>
+            </button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer class="rodape">
+    <p>Sabor & Brasa &copy; Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

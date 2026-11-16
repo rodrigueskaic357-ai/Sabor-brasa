@@ -1,138 +1,469 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sabor & Brasa: hambúrgueres artesanais preparados na brasa, com ingredientes selecionados.">
+    <meta name="theme-color" content="#171717">
     <title>Sabor & Brasa - Hamburgueria</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
+    <script src="index.js" defer></script>
 </head>
+
 <body>
 
-    <!-- CABAÇALHO E MENU -->
+    <!-- CABEÇALHO -->
     <header class="cabecalho">
+
         <div class="logo">
             <h1>Sabor & Brasa</h1>
         </div>
-        <nav class="navegacao">
+
+        <nav class="navegacao" aria-label="Menu principal">
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="cardapio.html">Cardápio</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
                 <li><a href="#modalLogin" class="btn-login">Login</a></li>
+                
             </ul>
         </nav>
+
     </header>
 
     <main>
-        <!-- SEÇÃO: HOME -->
+
+        <!-- HOME -->
         <section id="home" class="secao-home">
+
             <div class="home-overlay">
+
                 <div class="home-conteudo">
-                    <h1>Sabor & Brasa</h1>
-                    <p>O autêntico hambúrguer artesanal grelhado na brasa</p>
-                    <a href="cardapio.html" class="btn-principal">Confira nosso cardápio </a>
+
+                    <span class="destaque-home">
+                        HAMBÚRGUER ARTESANAL
+                    </span>
+
+                    <h1>O verdadeiro sabor está na brasa.</h1>
+
+                    <p>
+                        Ingredientes selecionados, carnes suculentas
+                        e aquele sabor defumado que transforma
+                        cada mordida em uma experiência.
+                    </p>
+
+                    <div class="botoes-home">
+
+                        <a href="cardapio.html" class="btn-principal">
+                            Conheça nosso cardápio
+                        </a>
+
+                        <a href="#sobre" class="btn-secundario">
+                            Conheça nossa história
+                        </a>
+
+                    </div>
+
+                    <div class="home-informacoes">
+
+                        <span>🔥 Preparado na brasa</span>
+                        <span>🍔 Ingredientes selecionados</span>
+                        <span>⭐ Sabor artesanal</span>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- SEÇÃO: SOBRE -->
+        <!-- SOBRE -->
         <section id="sobre" class="secao-sobre">
+
+            <!-- INTRODUÇÃO -->
+            <div class="sobre-introducao">
+
+                <span class="subtitulo">
+                    CONHEÇA A SABOR & BRASA
+                </span>
+
+                <h2>Mais que um hambúrguer, uma experiência.</h2>
+
+                <p>
+                    Nossa paixão é transformar ingredientes de qualidade
+                    em momentos especiais. Cada detalhe é pensado para
+                    oferecer sabor, qualidade e uma experiência única.
+                </p>
+
+            </div>
+
+            <!-- NOSSA ESSÊNCIA -->
             <div class="sobre-bloco">
+
                 <div class="sobre-texto">
+
+                    <span class="subtitulo">NOSSA ESSÊNCIA</span>
+
                     <h2>Sabor de verdade em cada mordida.</h2>
+
                     <p>
-                        Na nossa hamburgueria, hambúrguer é assunto sério. Não usamos atalhos:<br>
-                         trabalhamos exclusivamente com blends de carnes nobres e selecionadas,<br>
-                          moídas e moldadas diariamente. Cada disco vai direto para a grelha no<br> fogo forte,
-                           garantindo aquela crosta perfeita por fora e um interior<br> extremamente suculento e cheio de sabor.<br>
-                            <br>
-                        Para acompanhar, selecionamos pães artesanais selados na manteiga,<br>
-                         queijos de verdade derretidos no ponto ideal e molhos autorais preparados do zero na nossa cozinha.<br>
-                          Do clássico pão, carne e queijo às combinações mais ousadas com bacon crocante e acompanhamentos crocantes,<br>
-                           entregamos uma verdadeira experiência gastronômica.<br>
+                        A Sabor & Brasa nasceu em 2026 com o objetivo de oferecer hambúrgueres deliciosos, preparados com ingredientes de qualidade e muito carinho.
+                      Nossa hamburgueria foi criada com a ideia de transformar cada refeição em uma experiência especial, unindo sabor, qualidade e um atendimento acolhedor.
+                     Trabalhamos com hambúrgueres artesanais, ingredientes frescos, combinações especiais e aquele sabor irresistível de carne feita na brasa.
+                    </p> 
+
+                    <p>
+                        Mais do que vender hambúrgueres, queremos proporcionar momentos felizes, reunir pessoas e conquistar nossos clientes a cada pedido.
+                        Nossa missão é oferecer produtos saborosos, com qualidade e preços acessíveis.
+                        Nossa visão é crescer e nos tornar uma hamburgueria reconhecida pela qualidade e pelo bom atendimento.
                     </p>
+
+                    <p>
+                        Nossos valores são respeito, dedicação, honestidade e paixão pelo que fazemos.
+                        Sabor & Brasa – Desde 2026, levando mais sabor até você!
+                    </p>
+
                 </div>
-                <img src="1 sobre.avif"alt=Hamburgueria Sabor & Brasa class="sobre-imagem">
+
+                <img
+                    src="1 sobre.avif"
+                    alt="Hambúrguer artesanal preparado na brasa"
+                    class="sobre-imagem"
+                    loading="lazy"
+                >
+
             </div>
 
-            <div class="sobre-bloco">
+            <!-- NOSSO DIFERENCIAL -->
+            <div class="sobre-bloco sobre-invertido">
+
+                <img
+                    src="2 sobre.avif"
+                    alt="Preparação de alimentos na brasa"
+                    class="sobre-imagem"
+                    loading="lazy"
+                >
+
                 <div class="sobre-texto">
-                    <h2>Nossa Experiência Gastronômica</h2>
+
+                    <span class="subtitulo">NOSSO DIFERENCIAL</span>
+
+                    <h2>Como tudo começou</h2>
+
                     <p>
-                        <strong>O Segredo da Nossa Brasa</strong><br>
-                        A história da nossa hamburgueria começou com um desejo simples:<br>
-                         resgatar a essência do hambúrguer artesanal clássico,<br>
-                        A história da nossa hamburgueria nasceu de um desejo claro:<br>
-                         resgatar a verdadeira essência do hambúrguer artesanal clássico<br>
-                          e elevar cada ingrediente ao seu nível máximo.<br>
-                          Cansados dos processos ultraprocessados e do modelo industrializado,<br>
-                           decidimos voltar ao básico,mas de uma forma extraordinária.<br>
-                           <br>
-                        Para nós, o fogo não é apenas um método de preparo, é o nosso<br>
-                         ingrediente principal. É no calor da brasa viva que o sabor<br>
-                          defumado único desperta, selando carnes selecionadas e garantindo<br>
-                        uma suculência incomparável. Unimos a simplicidade da tradição à paixão<br>
-                         pela gastronomia artesanal, onde nada é congelado e tudo é feito do zero,<br>
-                          com respeito ao tempo e ao sabor de verdade.
+                        A história da Sabor & Brasa começou com uma ideia simples: criar um lugar onde as
+                         pessoas pudessem encontrar bons hambúrgueres e aproveitar
+                         bons momentos. Em 2026, esse projeto finalmente saiu do papel e se tornou realidade.
                     </p>
+
+                    <p>
+                        Desde o início, cada detalhe foi pensado para construir uma identidade própria, desde o nome até
+                         as receitas e o jeito de atender. Aos poucos, a hamburgueria foi ganhando forma, criando sua
+                          própria personalidade e dando os primeiros passos no mercado.
+                    </p>
+
+                    <p>
+                        Unimos tradição, qualidade e criatividade
+                        para oferecer muito mais do que uma refeição:
+                        oferecemos uma experiência gastronômica.
+                    </p>
+
                 </div>
-                <img src="2 sobre.avif" alt="Churrasco na brasa" class="sobre-imagem">
+
             </div>
+
+            <!-- DIFERENCIAIS -->
+            <div class="diferenciais">
+
+                <article class="diferencial-card">
+
+                    <span aria-hidden="true">🔥</span>
+
+                    <h3>Feito na brasa</h3>
+
+                    <p>
+                        O sabor especial do preparo artesanal.
+                    </p>
+
+                </article>
+
+                <article class="diferencial-card">
+
+                    <span aria-hidden="true">🥩</span>
+
+                    <h3>Qualidade</h3>
+
+                    <p>
+                        Ingredientes selecionados para cada receita.
+                    </p>
+
+                </article>
+
+                <article class="diferencial-card">
+
+                    <span aria-hidden="true">🍔</span>
+
+                    <h3>Artesanal</h3>
+
+                    <p>
+                        Combinações preparadas com cuidado e dedicação.
+                    </p>
+
+                </article>
+
+            </div>
+
+            <!-- CHAMADA PARA O CARDÁPIO -->
+            <div class="chamada-cardapio">
+
+                <h2>Já escolheu seu próximo hambúrguer?</h2>
+
+                <p>
+                    Confira nossas opções e encontre seu favorito.
+                </p>
+
+                <a href="cardapio.html" class="btn-principal">
+                    Ver cardápio
+                </a>
+
+            </div>
+
         </section>
 
-        <!-- SEÇÃO: CONTATO -->
+        <!-- CONTATO -->
         <section id="contato" class="secao-contato">
-            <h2>Contato & Localização</h2>
-            <p>Faça seu pedido ou venha nos visitar!</p>
-            
+
+            <span class="subtitulo">FALE COM A GENTE</span>
+
+            <h2>Venha conhecer a Sabor & Brasa</h2>
+
+            <p>
+                Estamos prontos para receber você e preparar
+                seu próximo hambúrguer favorito!
+            </p>
+
             <div class="contato-info">
-                <p>📍 Endereço: Rua da Brasa, 123 - Centro</p>
-                <p>📞 Telefone / WhatsApp: (31) 99999-9999</p>
-                <p>⏰ Funcionamento: Terça a Domingo, das 18h às 23h30</p>
+
+                <!-- ENDEREÇO -->
+                <div class="contato-item">
+
+                    <span aria-hidden="true">📍</span>
+
+                    <div>
+                        <h3>Endereço</h3>
+                        <p>Rua da Brasa, 123 - Centro</p>
+                    </div>
+
+                </div>
+
+                <!-- TELEFONE -->
+                <div class="contato-item">
+
+                    <span aria-hidden="true">📞</span>
+
+                    <div>
+                        <h3>Telefone / WhatsApp</h3>
+                        <p>(31) 99999-9999</p>
+                    </div>
+
+                </div>
+
+                <!-- FUNCIONAMENTO -->
+                <div class="contato-item">
+
+                    <span aria-hidden="true">⏰</span>
+
+                    <div>
+                        <h3>Funcionamento</h3>
+                        <p>Terça a Domingo, das 18h às 23h30</p>
+                    </div>
+
+                </div>
+
             </div>
+
+            <a href="cardapio.html" class="btn-principal">
+                Faça seu pedido
+            </a>
+
         </section>
+
     </main>
 
-    <!-- MODAL DE LOGIN SIMPLIFICADO -->
-    <div id="modalLogin" class="modal">
+    <!-- MODAL DE LOGIN -->
+    <div
+        id="modalLogin"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="titulo-login"
+    >
+
         <div class="conteudo-modal">
-            <a href="#" class="fechar">&times;</a>
-            <h2>Login</h2>
-            <form action="#">
-                <input type="email" placeholder="Seu e-mail" required>
-                <input type="password" placeholder="Sua senha" required>
-                <button type="submit">Entrar</button>
+
+            <a href="#" class="fechar" aria-label="Fechar login">
+                &times;
+            </a>
+
+            <h2 id="titulo-login">Bem-vindo de volta!</h2>
+
+            <p class="texto-modal">
+                Entre na sua conta para continuar.
+            </p>
+
+            <form action="#" method="post">
+
+                <label for="email-login">E-mail:</label>
+
+                <input
+                    type="email"
+                    id="email-login"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="senha-login">Senha:</label>
+
+                <input
+                    type="password"
+                    id="senha-login"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit">
+                    Entrar
+                </button>
+
             </form>
+
+            <p class="link-cadastro">
+                Ainda não tem uma conta?
+                <a href="#modalCadastro">Cadastre-se</a>
+            </p>
+
         </div>
+
     </div>
 
-    <!--PAGAMENTO -->
-    <div id="modalPagamento" class="modal">
-        <div class="conteudo-modal">
-            <a href="#" class="fechar">&times;</a>
-            <h2>Finalizar Pedido</h2>
-            <form action="#">
-                <input type="text" placeholder="Seu Nome completo" required>
-                <input type="text" placeholder="Endereço de Entrega" required>
-                
-                <label class="label-pagamento">Forma de Pagamento:</label>
-                <select required>
-                    <option value="">Selecione...</option>
-                    <option value="pix">PIX</option>
-                    <option value="cartao">Cartão de Crédito / Débito</option>
-                    <option value="dinheiro">Dinheiro</option>
-                </select>
+    <!-- MODAL DE CADASTRO -->
+    <div
+        id="modalCadastro"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="titulo-cadastro"
+    >
 
-                <button type="submit" class="btn-pagar">Confirmar Pedido</button>
+        <div class="conteudo-modal">
+
+            <a href="#" class="fechar" aria-label="Fechar cadastro">
+                &times;
+            </a>
+
+            <h2 id="titulo-cadastro">Crie sua conta</h2>
+
+            <p class="texto-modal">
+                Preencha os dados para se cadastrar.
+            </p>
+
+            <form action="#" method="post">
+
+                <label for="nome">Nome completo:</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="email-cadastro">E-mail:</label>
+
+                <input
+                    type="email"
+                    id="email-cadastro"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="telefone">Telefone:</label>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(00) 00000-0000"
+                    autocomplete="tel"
+                    required
+                >
+
+                <label for="senha-cadastro">Senha:</label>
+
+                <input
+                    type="password"
+                    id="senha-cadastro"
+                    name="senha"
+                    placeholder="Crie uma senha"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <label for="confirmar">Confirme sua senha:</label>
+
+                <input
+                    type="password"
+                    id="confirmar"
+                    name="confirmar"
+                    placeholder="Digite a senha novamente"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+
             </form>
+
+            <p class="link-cadastro">
+                Já tem uma conta?
+                <a href="#modalLogin">Faça login</a>
+            </p>
+
         </div>
+
     </div>
 
     <!-- RODAPÉ -->
     <footer class="rodape">
-        <p>Sabor & Brasa &copy; Todos os direitos reservados.</p>
+
+        <h2>Sabor & Brasa</h2>
+
+        <p>O verdadeiro sabor está na brasa.</p>
+
+        <p>
+            &copy; 2026 Sabor & Brasa.
+            Todos os direitos reservados.
+        </p>
+
     </footer>
 
 </body>
 </html>
+

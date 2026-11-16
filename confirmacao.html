@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Confirmado - Sabor & Brasa</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+ <!-- CABEÇALHO -->
+ <header class="cabecalho">
+
+    <div class="logo">
+        <h1>Sabor & Brasa</h1>
+    </div>
+
+    <nav class="navegacao" aria-label="Menu principal">
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#modalLogin" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+    
+    <main class="confirmacao">
+        <div class="icone-sucesso">✓</div>
+
+        <h1>Pedido confirmado!</h1>
+
+        <p class="mensagem">
+            Seu pedido foi enviado com sucesso.
+            Obrigado por escolher o Sabor & Brasa!
+        </p>
+
+        <div class="detalhes-pedido">
+            <h2>Resumo do pedido</h2>
+
+            <p><strong>Número do pedido:</strong> <span id="numeroPedido"></span></p>
+
+            <div id="produtosPedido"></div>
+
+            <hr>
+
+            <h3>Total: <span id="totalPedido">R$ 0,00</span></h3>
+        </div>
+
+        <p class="aviso">
+            Acompanhe as informações do seu pedido pelo WhatsApp.
+        </p>
+
+        <a href="index.html" class="btn-voltar">
+            Voltar ao início
+        </a>
+    </main>
+
+    <script>
+        const pedido = JSON.parse(localStorage.getItem("ultimoPedido"));
+
+        if (pedido) {
+            document.getElementById("numeroPedido").textContent =
+                pedido.numero;
+
+            document.getElementById("totalPedido").textContent =
+                Number(pedido.total).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL"
+                });
+
+            const lista = document.getElementById("produtosPedido");
+
+            pedido.produtos.forEach(produto => {
+                const item = document.createElement("p");
+
+                item.textContent =
+                    `${produto.nome} - ${produto.quantidade}x`;
+
+                lista.appendChild(item);
+            });
+        } else {
+            document.querySelector(".detalhes-pedido").innerHTML =
+                "<p>Nenhum pedido encontrado.</p>";
+        }
+    </script>
+
+    <style>
+        .confirmacao {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            text-align: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        .icone-sucesso {
+            width: 75px;
+            height: 75px;
+            margin: auto;
+            border-radius: 50%;
+            background: #28a745;
+            color: white;
+            font-size: 50px;
+            line-height: 75px;
+        }
+
+        .confirmacao h1 {
+            color: #28a745;
+            margin-top: 20px;
+        }
+
+        .mensagem, .aviso {
+            color: #555;
+            margin: 15px 0;
+        }
+
+        .detalhes-pedido {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .detalhes-pedido h2 {
+            color: #f07818;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #f07818;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn-voltar:hover {
+            background: #d9630b;
+        }
+    </style>
+
+</body>
+</html>

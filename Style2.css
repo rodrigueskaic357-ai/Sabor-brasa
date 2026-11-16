@@ -1,164 +1,458 @@
-/* ==================== ESTILOS GERAIS ==================== */
+
+/* ==================== CONFIGURAÇÕES GERAIS ==================== */
 * {
     margin: 0;
     padding: 0;
-    outline: 0;
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
 }
-/* ==================== CABAÇALHO / MENU ==================== */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #171717;
+    color: #ffffff;
+    padding-top: 75px;
+}
+
+/* ==================== CABEÇALHO ==================== */
 .cabecalho {
     width: 100%;
-    background-color: #333;
+    height: 75px;
+    background-color: #111111;
+    border-bottom: 2px solid #F39C12;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 7%;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.4);
 }
 
 .logo h1 {
     color: #ffc107;
-    font-size: 22px;
-}
-
-.navegacao {
-    display: flex;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 .menu {
     display: flex;
     list-style: none;
     align-items: center;
+    gap: 10px;
 }
 
 .menu a {
     text-decoration: none;
     color: #ffffff;
-    padding: 20px 15px;
+    padding: 12px 16px;
     display: block;
-    transition: color 0.3s;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .menu a:hover {
     color: #ffc107;
 }
 
-.btn-login {
-    background-color: #ec931f;
-    border-radius: 4px;
-    padding: 8px 15px !important;
-    margin-left: 10px;
-    font-weight: bold;
+.menu .btn-login {
+    background-color: #C0392B;
+    border-radius: 6px;
+    padding: 10px 20px;
 }
 
-.btn-login:hover {
-    background-color: #C0392B !important;
-    color: #ffffff !important;
+.menu .btn-login:hover {
+    background-color: #ffc107;
+    color: #111111;
 }
-/* ==================== SEÇÃO: CARDÁPIO ==================== */
+
+/* ==================== CARDÁPIO ==================== */
 .secao-cardapio {
     width: 100%;
-    background-color: #474645;
-    padding: 80px 20px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #202020, #141414);
+    padding: 65px 5%;
     text-align: center;
 }
 
+.cardapio-header {
+    margin-bottom: 45px;
+}
+
 .cardapio-header h2 {
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 38px;
+    color: #ffc107;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .cardapio-header p {
-    margin-bottom: 40px;
-    font-style: italic;
+    color: #bbbbbb;
+    font-size: 16px;
 }
 
+/* ==================== GRADE DE PRODUTOS ==================== */
 .cardapio-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 260px));
     justify-content: center;
+    gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
-    gap: 25px;
+    margin: 0 auto 35px;
 }
 
+/* ==================== CARTÕES ==================== */
 .cartao-produto {
-    background-color: 
-    #000000;
-    border: 2px solid #F39C12;
-    border-radius: 8px;
-    width: 260px;
-    padding: 15px;
+    background-color: #252525;
+    border: 1px solid #3b3b3b;
+    border-radius: 14px;
+    width: 100%;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s;
+    overflow: hidden;
+    transition: 0.35s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .cartao-produto:hover {
-    transform: translateY(-5px);
+    transform: translateY(-9px);
+    border-color: #F39C12;
+    box-shadow: 0 10px 25px rgba(243,156,18,0.15);
 }
 
+/* IMAGENS */
 .cartao-produto img {
     width: 100%;
-    height: 160px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 9px;
+    transition: transform 0.4s;
 }
 
+.cartao-produto:hover img {
+    transform: scale(1.04);
+}
+
+/* TÍTULOS */
 .cartao-produto h3 {
-    margin: 10px 0 5px 0;
-    font-size: 20px;
-    background-color: #d8d8d8;
+    color: #ffc107;
+    font-size: 19px;
+    margin: 15px 0 7px;
+    background: transparent;
 }
 
+/* CÓDIGO */
 .sku {
-    color: #7F8C8D;
-    font-size: 12px;
+    color: #999999;
+    font-size: 11px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
 }
 
+/* DESCRIÇÃO */
 .descricao {
-    font-size: 14px;
-    color: #fff8f8;
+    color: #cccccc;
+    font-size: 13px;
+    line-height: 1.6;
     margin-bottom: 15px;
-    min-height: 40px;
+    min-height: 62px;
 }
 
+/* PREÇO */
 .preco {
     color: #ffc107;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-top: auto;
+    margin-bottom: 17px;
 }
 
+/* BOTÃO PEDIDO */
 .btn-pedido {
-    background-color: #C0392B;
+    background: linear-gradient(135deg, #C0392B, #922B21);
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 12px 15px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 7px;
     font-weight: bold;
-    transition: background-color 0.2s;
+    font-size: 14px;
     width: 100%;
+    transition: 0.3s;
 }
 
 .btn-pedido:hover {
-    background-color: #a93223;
+    background: #ffc107;
+    color: #111111;
+    transform: scale(1.03);
+}
+
+/* ==================== MODAL DE PAGAMENTO ==================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.conteudo-modal {
+    background-color: #222222;
+    border: 2px solid #F39C12;
+    border-radius: 14px;
+    padding: 30px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    position: relative;
+    color: #ffffff;
+}
+
+.fechar {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.fechar:hover {
+    color: #C0392B;
+}
+
+.conteudo-modal h2 {
+    color: #ffc107;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.conteudo-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.conteudo-modal input[type="text"],
+.conteudo-modal select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #444444;
+    border-radius: 7px;
+    font-size: 14px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.conteudo-modal input:focus,
+.conteudo-modal select:focus {
+    border-color: #F39C12;
+}
+
+.conteudo-modal input::placeholder {
+    color: #aaaaaa;
+}
+
+.label-pagamento {
+    font-size: 14px;
+    font-weight: bold;
+    color: #dddddd;
+}
+
+.btn-pagar {
+    background-color: #C0392B;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-pagar:hover {
+    background-color: #ffc107;
+    color: #111111;
 }
 
 /* ==================== RODAPÉ ==================== */
 .rodape {
-    background-color: #111111;
-    color: #888888;
+    background-color: #0d0d0d;
+    border-top: 1px solid #333333;
+    color: #999999;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-size: 14px;
 }
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+    .cabecalho {
+        height: auto;
+        min-height: 75px;
+        padding: 12px 4%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    body {
+        padding-top: 125px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .menu a {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .logo h1 {
+        font-size: 23px;
+    }
+
+    .cardapio-header h2 {
+        font-size: 29px;
+    }
+
+    .cardapio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardapio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-produto {
+        max-width: 350px;
+        margin: auto;
+    }
+}
+
+
+/* ==================== NAVEGAÇÃO DAS CATEGORIAS ==================== */
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 35px auto 65px;
+}
+
+.categorias a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #252525;
+    border: 1px solid #F39C12;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.categorias a:hover {
+    background-color: #ffc107;
+    color: #111111;
+    transform: translateY(-4px);
+}
+
+/* ==================== SEÇÕES DE CATEGORIAS ==================== */
+
+.categoria-produtos {
+    padding-top: 25px;
+    margin-bottom: 75px;
+    scroll-margin-top: 95px;
+}
+
+.titulo-categoria {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #F39C12;
+}
+
+.titulo-categoria h2 {
+    color: #ffc107;
+    font-size: 30px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.titulo-categoria p {
+    color: #bbbbbb;
+    font-size: 15px;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 768px) {
+    .categorias {
+        gap: 10px;
+        margin-bottom: 45px;
+    }
+
+    .categorias a {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .titulo-categoria {
+        text-align: center;
+    }
+
+    .titulo-categoria h2 {
+        font-size: 25px;
+    }
+
+    .categoria-produtos {
+        scroll-margin-top: 135px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categorias {
+        flex-direction: column;
+    }
+
+    .categorias a {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
