@@ -361,7 +361,7 @@ body {
 }
 
 
-/* ==================== NAVEGAÇÃO DAS CATEGORIAS ==================== */
+/*  NAVEGAÇÃO DAS CATEGORIAS */
 
 .categorias {
     display: flex;
@@ -390,7 +390,7 @@ body {
     transform: translateY(-4px);
 }
 
-/* ==================== SEÇÕES DE CATEGORIAS ==================== */
+/*  SEÇÕES DE CATEGORIAS  */
 
 .categoria-produtos {
     padding-top: 25px;
@@ -419,7 +419,7 @@ body {
     font-size: 15px;
 }
 
-/* ==================== RESPONSIVIDADE ==================== */
+/* RESPONSIVIDADE  */
 
 @media (max-width: 768px) {
     .categorias {
